@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% from "includes/formhelpers.html" import render_field %}
+
+
+<h3>Kayıt Olun</h3>
+<hr>
+<form method="post" id="yazı">
+    {{ render_field(form1.name,class="form-control") }}
+    {{ render_field(form1.username,class="form-control") }}
+    {{ render_field(form1.email,class="form-control") }}
+    {{ render_field(form1.password,class="form-control") }}
+    {{ render_field(form1.confirm,class="form-control") }}
+    <button type="submit" class="btn btn-dark">Teslim Et</button>
+
+</form>
+{% endblock body %}

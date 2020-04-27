@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block corona %}
+<style>
+    h3{
+        color: rgb(37, 93, 167);
+    }
+    p{
+        color: rgb(0, 0, 0);
+    }
+    
+</style>
+<div class="jumbotron text-center">
+    <h3>Covid-19 İstatistikleri(Canlı)</h3>
+    <div class="jumbotron text-left"> 
+    <hr>
+    <p>Toplam Vaka Sayısı : {{data[0].text.strip()}}</p>
+    <p>Toplam Vefat Sayısı : {{data[1].text.strip()}}</p>
+    <p>Toplam İyileşen Sayısı : {{data[2].text.strip()}}</p>
+    <p>{{closed_cases}}</p>
+    <p>{{percent1}}</p>
+    <hr>
+    <p>Kaynak</p><a href="https://www.worldometers.info/coronavirus" target="_blank">https://www.worldometers.info/coronavirus</a>
+    </div>
+</div>
+{% endblock corona %}
+
